@@ -17,6 +17,10 @@ class OrdersController < ApplicationController
 
   rescue Stripe::CardError => e
     redirect_to cart_path, flash: { error: e.message }
+  rescue StandardError => e
+    puts e
+    puts e.backtrace
+    redirect_to cart_path, flash: {error: e.message }
   end
 
   private
