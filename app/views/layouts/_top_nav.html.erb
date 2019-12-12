@@ -37,7 +37,7 @@
           </a>
           <ul class="dropdown-menu">
           <% if current_user %>
-            <li>Hey! <%= current_user.name %></li>
+            <li>Signed in as <%= current_user.name %></li>
             <li><%= link_to "Logout", '/logout' %></li>
           <% else %>
             <li><%= link_to 'Login', '/login' %></li>
