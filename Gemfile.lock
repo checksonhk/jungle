@@ -39,6 +39,10 @@ GEM
     autoprefixer-rails (6.3.7)
       execjs
     bcrypt (3.1.11)
+    better_errors (2.5.1)
+      coderay (>= 1.0.0)
+      erubi (>= 1.0.0)
+      rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
     bootstrap-sass (3.3.6)
@@ -51,6 +55,7 @@ GEM
       activesupport (>= 3.2.0)
       json (>= 1.7)
       mime-types (>= 1.16)
+    coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
     debug_inspector (0.0.2)
@@ -59,6 +64,7 @@ GEM
     dotenv (1.0.2)
     dotenv-rails (1.0.2)
       dotenv (= 1.0.2)
+    erubi (1.9.0)
     erubis (2.7.0)
     execjs (2.7.0)
     faker (1.6.1)
@@ -195,6 +201,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  better_errors
   bootstrap-sass (~> 3.3.6)
   byebug
   carrierwave
