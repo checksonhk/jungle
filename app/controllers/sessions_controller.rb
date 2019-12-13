@@ -1,6 +1,11 @@
 class Session
   include ActiveModel::Validations
   attr_accessor :email, :password
+
+  def initialize(email=nil, password=nil)
+    @email = email
+    @password = password
+  end
   
   validates :email, presence: true
   validates :password, presence: true
@@ -13,12 +18,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @session = Session.new
+    @session = Session.new(session_params[:email], session_params[:password])
     @session.valid?
 
-    user = User.find_by_email(params[:email])
+    user = User.find_by_email(session_params[:email])
     # If the user exists AND the password entered is correct.
-    if user && user.authenticate(params[:password])
+    if user && user.authenticate(session_params[:password])
       # Save the user id inside the browser cookie. This is how we keep the user 
       # logged in when they navigate around our website.
       session[:user_id] = user.id
@@ -36,11 +41,11 @@ class SessionsController < ApplicationController
 
   private
 
-  # WHY DONT I NEED THIS ???
-  # def session_params 
-  #   params.require(:session).permit(
-  #     :email, 
-  #     :password, 
-  # end  
+  def session_params 
+    params.require(:session).permit(
+      :email, 
+      :password
+    )
+  end  
 
 end
