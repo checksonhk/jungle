@@ -54,7 +54,7 @@ RSpec.describe User, type: :model do
     end
 
     it "it should return null if email and password don't match" do
-      user = User.authenticate_with_credentials("temp2@gmail.com", "wrong")
+      user = User.authenticate_with_credentials("temp@gmail.com", "wrong")
       expect(user).to be nil
     end
 
