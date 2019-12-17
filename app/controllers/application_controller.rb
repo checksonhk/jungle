@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   end
 
   def cart
-    @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {}
+    @cart ||= cookies[:cart].present? ? JSON.parse(cookies[:cart]) : {};
   end
   helper_method :cart
 
