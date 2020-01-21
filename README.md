@@ -7,7 +7,7 @@ Some special features of Jungle is its rating system, email confirmation capabil
   2. Jungle is set up with Action Mailer to send out simple email confirmations to users upon purchase
   3. While users do not need to be signed in to view the products catalog and respective detail pages, a user must sign in to submit a review or delete a review and admin users have an extra step of authentication to access the create product and create category pages
 
-## Captures
+## Demo
 
 !["Product Catalog: Logged-In User"](https://github.com/checksonhk/jungle/blob/master/img/demo-1.gif)
 !["Product Catelog Continued: Multiple Badges"](https://github.com/checksonhk/jungle/blob/master/img/demo-2.gif)
